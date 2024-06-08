@@ -92,7 +92,7 @@ document.addEventListener("touchmove", (e) => {
   if (!isDown) return;
   e.preventDefault();
   const x = e.pageX - slider.offsetLeft;
-  const walk = (x - startX) * 3; // Adjust sensitivity
+  const walk = (x - startX) * 2; // Adjust sensitivity
   slider.scrollLeft = scrollLeft - walk;
   checkButtons()
   e.stopPropagation();
