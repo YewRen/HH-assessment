@@ -1,0 +1,955 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/odometer-theme-default.css" />
+    <title>H&H assessment</title>
+    <link
+      rel="shortcut icon"
+      href="./assets/PAA_Logo Liner_Horizontal_White.png"
+      type="image/x-icon"
+    />
+    <script type="module" src="./js/main.js"></script>
+    <script type="module" src="./js/odometer.min.js"></script>
+  </head>
+  <body>
+    <main
+      data-bs-spy="scroll"
+      data-bs-target="#sidebar"
+      data-bs-offset="0"
+      data-bs-smooth-scroll="true"
+      tabindex="0"
+    >
+      <div class="sticky-top">
+        <div class="banner-container">
+          <div class="notification-bar">
+            <div class="banner-image">
+              <img src="./assets/banner-image.png" />
+            </div>
+            <h4 class="notification-text">Philanthropy Asia Summit</h4>
+            <div class="position-relative overlay-container">
+              <img
+                class="position-relative"
+                src="./assets/banner-shape.png"
+                alt="shape"
+              />
+              <div class="overlay">
+                <div class="notification-shape-text-container">
+                  <a href="#" class="notification-shape-text">More info</a>
+                  <span
+                    ><svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="17.969"
+                      height="19.588"
+                      viewBox="0 0 17.969 19.588"
+                      class="d-block m-auto"
+                    >
+                      <g
+                        id="Group_44677"
+                        data-name="Group 44677"
+                        transform="translate(-2067.072 6077.943) rotate(90)"
+                      >
+                        <path
+                          id="Path_108332"
+                          data-name="Path 108332"
+                          d="M3.021,0H9.793L6.681,7.689H0Z"
+                          transform="translate(-6077.943 -2074.761)"
+                          fill="#faf9f7"
+                        />
+                        <path
+                          id="Path_108333"
+                          data-name="Path 108333"
+                          d="M6.759,0H0L7.22,17.969H13.9Z"
+                          transform="translate(-6072.257 -2085.042)"
+                          fill="#faf9f7"
+                        />
+                      </g>
+                    </svg>
+                  </span>
+                </div>
+                <span
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="14"
+                    height="14"
+                    viewBox="0 0 14 14"
+                    class="close-icon"
+                  >
+                    <path
+                      id="Icon_material-close"
+                      data-name="Icon material-close"
+                      d="M21.5,8.91,20.09,7.5,14.5,13.09,8.91,7.5,7.5,8.91l5.59,5.59L7.5,20.09,8.91,21.5l5.59-5.59,5.59,5.59,1.41-1.41L15.91,14.5Z"
+                      transform="translate(-7.5 -7.5)"
+                      fill="#faf9f7"
+                    />
+                  </svg>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="position-relative"
+          style="background-color: var(--clr-white)"
+        >
+          <div class="container">
+            <div class="navbar navbar-expand-lg nav-container">
+              <nav class="nav-wrapper">
+                <a href="#" class="navbar-brand m-0 p-0">
+                  <img
+                    src="./assets/PAA_Logo Liner_Horizontal_Green.png"
+                    alt="Green PAA logo"
+                  />
+                </a>
+                <div class="d-none d-lg-block roboto-regular ms-auto">
+                  <ul class="navbar-nav">
+                    <li class="nav-item">
+                      <a class="nav-font-style" href="#">Our Impact</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-font-style" href="#">Inspiring Action</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-font-style" href="#">Partners In Action</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-font-style" href="#">Events</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-font-style" href="#">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-font-style" href="#">Media Centre</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-font-style" href="#">Contact Us</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-font-style search-icon" href="#">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="20"
+                          height="20"
+                          viewBox="0 0 20 20"
+                        >
+                          <path
+                            d="M20.188,19.066l-1.121,1.121-5.811-5.743a8.131,8.131,0,1,1,1.19-1.19ZM8.131,14.58A6.449,6.449,0,1,0,1.683,8.131,6.449,6.449,0,0,0,8.131,14.58"
+                            fill="#122f1a"
+                          />
+                        </svg>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="d-flex align-items-center">
+                  <button
+                    class="search-icon navbar-toggler"
+                    data-bs-toggle="offcanvas"
+                    data-bs-target="#searchmenu"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        d="M20.188,19.066l-1.121,1.121-5.811-5.743a8.131,8.131,0,1,1,1.19-1.19ZM8.131,14.58A6.449,6.449,0,1,0,1.683,8.131,6.449,6.449,0,0,0,8.131,14.58"
+                        fill="#122f1a"
+                      />
+                    </svg>
+                  </button>
+                  <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="offcanvas"
+                    data-bs-target="#navmenu"
+                  >
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                </div>
+              </nav>
+              <!-- Mobile menu -->
+              <nav class="d-lg-none offcanvas offcanvas-end" id="navmenu">
+                <div class="canvas-header">
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="offcanvas"
+                  ></button>
+                </div>
+                <div class="mobile-nav">
+                  <ul class="navbar-nav">
+                    <li class="nav-item">
+                      <a href="#">Our Impact</a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="#">Inspiring Action</a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="#">Partners In Action</a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="#">Events</a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="#">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="#">Media Centre</a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="#">Contact Us</a>
+                    </li>
+                  </ul>
+                </div>
+              </nav>
+              <!-- End of Mobile menu -->
+              <!-- Search menu -->
+              <div class="d-lg-none offcanvas offcanvas-top" id="searchmenu">
+                <div class="canvas-header search">
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="offcanvas"
+                  ></button>
+                </div>
+                <div class="input-container">
+                  <form action="/src/index.html">
+                    <input
+                      class="tablet-input"
+                      type="text"
+                      id="search-input"
+                      placeholder="What are you searching for?"
+                    />
+                    <input
+                      class="mobile-input"
+                      type="text"
+                      id="search-input"
+                      placeholder="Search"
+                    />
+                    <i id="arrow-icon" type="submit"
+                      ><svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="21.061"
+                        height="21.061"
+                        viewBox="0 0 21.061 21.061"
+                      >
+                        <g
+                          id="Icon_feather-arrow-right"
+                          data-name="Icon feather-arrow-right"
+                          transform="translate(-7.5 -6.97)"
+                        >
+                          <path
+                            id="Path_108575"
+                            data-name="Path 108575"
+                            d="M7.5,18h20"
+                            transform="translate(0 -0.5)"
+                            fill="none"
+                            stroke="#122f1a"
+                            stroke-linejoin="round"
+                            stroke-width="1.5"
+                          />
+                          <path
+                            id="Path_108576"
+                            data-name="Path 108576"
+                            d="M18,7.5l10,10-10,10"
+                            transform="translate(-0.5)"
+                            fill="none"
+                            stroke="#122f1a"
+                            stroke-width="1.5"
+                          />
+                        </g>
+                      </svg>
+                    </i>
+                  </form>
+                </div>
+              </div>
+              <!-- End of Search menu -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <section class="position-relative z-2">
+        <div class="container">
+          <div class="row hero-article">
+            <div class="col-lg-10 col-md-11 col-12">
+              <nav aria-label="breadcrumb">
+                <ol class="breadcrumb roboto-medium">
+                  <li class="breadcrumb-item breadcrumb-style">
+                    <a href="#">Our Impact</a>
+                  </li>
+                  <li class="breadcrumb-item breadcrumb-style">
+                    <a href="#">Climate and Nature</a>
+                  </li>
+                </ol>
+              </nav>
+              <h2 class="hero-article-header">
+                We promote environmental stewardship and sustainable practices
+                in Asia through education, raising awareness and action
+              </h2>
+            </div>
+            <img src="./assets/image1.png" alt="image 1" />
+          </div>
+        </div>
+      </section>
+      <aside id="sidebar">
+        <div class="container">
+          <div class="row">
+            <div class="col-3">
+              <nav class="navbar">
+                <ul class="nav nav-underline flex-column">
+                  <li class="nav-item">
+                    <a class="p-0 sidebar-link" href="#section1">At a Glance</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="p-0 sidebar-link" href="#section2"
+                      >Impact Stories</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="p-0 sidebar-link" href="#section3"
+                      >Extra Module 1</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="p-0 sidebar-link" href="#section4"
+                      >Extra Module 2</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="p-0 sidebar-link" href="#section5"
+                      >Calls to Action</a
+                    >
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </aside>
+      <section id="section1">
+        <article class="container">
+          <div class="row featured-article-header-container">
+            <div class="col-lg-3"></div>
+            <div class="col-lg-7 col-md-11 breadcrumb-style">
+              <p>At a Glance</p>
+              <h3 class="featured-article-header-btm40">
+                Lorem ipsum dolor sit amet, conses tetur adipiscing elit, sed si
+                do eiusmod tempor incididunt ut labore
+              </h3>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-3"></div>
+            <div class="col-lg-9 col-md-12">
+              <div class="row" style="row-gap: 16px">
+                <div class="col-lg-6 col-md-6 col-12">
+                  <div class="background-stats-wrapper">
+                    <div class="background-stats">
+                      <div class="d-flex">
+                        <span id="odometer1" class="odometer"></span>
+                        <h1 class="noto-serif-regular">%</h1>
+                      </div>
+                      <p class="roboto-medium">Lorem ipsum dolores</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-12">
+                  <div class="background-stats-wrapper">
+                    <div class="background-stats">
+                      <div class="d-flex">
+                        <span id="odometer2" class="odometer"></span>
+                        <h1 class="noto-serif-regular">%</h1>
+                      </div>
+                      <p class="roboto-medium">Lorem ipsum dolores</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-12">
+                  <div class="background-stats-wrapper">
+                    <div class="background-stats">
+                      <div class="d-flex">
+                        <span id="odometer3" class="odometer"></span>
+                        <h1 class="noto-serif-regular">%</h1>
+                      </div>
+                      <p class="roboto-medium">Lorem ipsum dolores</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-12">
+                  <div class="background-stats-wrapper">
+                    <div class="background-stats">
+                      <div class="d-flex">
+                        <h1 class="noto-serif-regular">$</h1>
+                        <span id="odometer4" class="odometer"></span>
+                        <h1 class="noto-serif-regular">M</h1>
+                      </div>
+                      <p class="roboto-medium">Lorem ipsum dolores</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+      </section>
+      <section id="section2">
+        <div class="container">
+          <article class="featured-article-container">
+            <div class="row">
+              <div class="col-lg-3"></div>
+              <div class="col-lg-6 col-md-10 breadcrumb-style">
+                <p>Impact Stories</p>
+                <h3 class="featured-article-header-btm60">
+                  Why we believe that together, we can go further, faster
+                </h3>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-lg-3"></div>
+              <div class="col-lg-7 col-md-11">
+                <img class="w-100" src="./assets/image2.png" alt="image 2" />
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-lg-3"></div>
+              <div class="col-lg-6 col-md-11">
+                <p class="featured-article-date">11 May 2023</p>
+                <h4 class="featured-article-title">Article Title</h4>
+                <p class="featured-article-desc">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam.
+                </p>
+                <button class="button-tag">Tag label</button>
+                <button class="button-tag">Tag label</button>
+              </div>
+            </div>
+          </article>
+          <article class="carousel-container">
+            <div class="row">
+              <div class="col-lg-3"></div>
+              <div class="col-lg-9 col-md-12">
+                <div class="slider-button-container">
+                  <div class="slider-leftbutton-wrapper prev">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="13.268"
+                      height="21.536"
+                      viewBox="0 0 13.268 21.536"
+                    >
+                      <path
+                        id="Path_108507"
+                        data-name="Path 108507"
+                        d="M18,7.5l9,9-9,9"
+                        transform="translate(-16.232 -5.732)"
+                        fill="none"
+                        stroke="#122f1a"
+                        stroke-linejoin="round"
+                        stroke-width="5"
+                      />
+                    </svg>
+                  </div>
+                  <div class="slider-rightbutton-wrapper next">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="13.268"
+                      height="21.536"
+                      viewBox="0 0 13.268 21.536"
+                    >
+                      <path
+                        id="Path_108507"
+                        data-name="Path 108507"
+                        d="M18,7.5l9,9-9,9"
+                        transform="translate(-16.232 -5.732)"
+                        fill="none"
+                        stroke="#122f1a"
+                        stroke-linejoin="round"
+                        stroke-width="5"
+                      />
+                    </svg>
+                  </div>
+                </div>
+                <div class="slider">
+                  <div class="slider-item-short-wrapper">
+                    <div class="slider-item-short">
+                      <div class="item-img">
+                        <img
+                          src="./assets/carousel-image1.png"
+                          alt="carousel-image1"
+                        />
+                      </div>
+                      <p class="article-style-date">11 May 2023</p>
+                      <h5 class="article-style-title">Article Title</h5>
+                      <p class="article-style-desc">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt ut labore et dolore
+                        magna
+                      </p>
+                    </div>
+                    <button class="button-tag">Tag label</button>
+                    <button class="button-tag">Tag label</button>
+                  </div>
+                  <div class="slider-item-long-wrapper">
+                    <div class="slider-item-long">
+                      <div class="item-img">
+                        <img
+                          src="./assets/carousel-image2.png"
+                          alt="carousel-image2"
+                        />
+                      </div>
+                      <p class="article-style-date">11 May 2023</p>
+                      <h5 class="article-style-title">Article Title</h5>
+                      <p class="article-style-desc">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor
+                      </p>
+                    </div>
+                    <button class="button-tag">Tag label</button>
+                    <button class="button-tag">Tag label</button>
+                  </div>
+                  <div class="slider-item-short-wrapper">
+                    <div class="slider-item-short">
+                      <div class="item-img">
+                        <img
+                          src="./assets/carousel-image3.png"
+                          alt="carousel-image3"
+                        />
+                      </div>
+                      <p class="article-style-date">11 May 2023</p>
+                      <h5 class="article-style-title">Article Title</h5>
+                      <p class="article-style-desc">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt ut labore et dolore
+                        magna
+                      </p>
+                    </div>
+                    <button class="button-tag">Tag label</button>
+                    <button class="button-tag">Tag label</button>
+                  </div>
+                  <div class="slider-item-long-wrapper">
+                    <div class="slider-item-long">
+                      <div class="item-img">
+                        <img
+                          src="./assets/carousel-image2.png"
+                          alt="carousel-image2"
+                        />
+                      </div>
+                      <p class="article-style-date">11 May 2023</p>
+                      <h5 class="article-style-title">Article Title</h5>
+                      <p class="article-style-desc">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor
+                      </p>
+                    </div>
+                    <button class="button-tag">Tag label</button>
+                    <button class="button-tag">Tag label</button>
+                  </div>
+                  <div class="slider-item-short-wrapper">
+                    <div class="slider-item-short">
+                      <div class="item-img">
+                        <img
+                          src="./assets/carousel-image1.png"
+                          alt="carousel-image1"
+                        />
+                      </div>
+                      <p class="article-style-date">11 May 2023</p>
+                      <h5 class="article-style-title">Article Title</h5>
+                      <p class="article-style-desc">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt ut labore et dolore
+                        magna
+                      </p>
+                    </div>
+                    <button class="button-tag">Tag label</button>
+                    <button class="button-tag">Tag label</button>
+                  </div>
+                  <div class="slider-item-long-wrapper">
+                    <div class="slider-item-long">
+                      <div class="item-img">
+                        <img
+                          src="./assets/carousel-image2.png"
+                          alt="carousel-image2"
+                        />
+                      </div>
+                      <p class="article-style-date">11 May 2023</p>
+                      <h5 class="article-style-title">Article Title</h5>
+                      <p class="article-style-desc">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor
+                      </p>
+                    </div>
+                    <button class="button-tag">Tag label</button>
+                    <button class="button-tag">Tag label</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row button-cta-container">
+              <div class="col-lg-3"></div>
+              <div class="col-lg-9 col-md-12">
+                <a
+                  class="d-flex justify-content-center text-decoration-none"
+                  href="#"
+                  ><button class="button-cta">all impact stories</button></a
+                >
+                <!-- <div class="hr"></div> -->
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3"></div>
+          <div class="col-lg-9 col-md-12">
+            <div class="hr"></div>
+          </div>
+        </div>
+      </div>
+      <section id="section3">
+        <article class="container">
+          <div class="row">
+            <div class="col-lg-3"></div>
+            <div class="col-lg-7 col-md-12 breadcrumb-style">
+              <p>Extra Module 1</p>
+              <h3 class="featured-flex-header">
+                Lorem ipsum dolor sit amet, conses tetur adipiscing elit, sed si
+                do eiusmod tempor incididunt ut labore
+              </h3>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-3"></div>
+            <div class="col-lg-9 col-md-12">
+              <div class="featured-flex-container">
+                <img src="./assets/image3.png" alt="image3" />
+                <p class="featured-flex-desc">
+                  Ut auctor nibh sed nisi ultrices volutpat. Vivamus tincidunt
+                  molestie tellus, eu convallis turpis. Mauris auctor, libero at
+                  imperdiet gravida, magna justo porta dolor, vel porttitor elit
+                  orci id nisl. Etiam quis orci convallis, facilisis magna ut,
+                  lacinia ligula. <br /><br />Cras commodo odio in iaculis
+                  tincidunt. Nunc urna lacus, maximus id mollis ac, aliquam nec
+                  ligula. Nulla facilisi. Nunc et tortor in diam ultricies
+                  condimentum ut et ante. Suspendisse sed eleifend nisl. Lorem
+                  ipsum dolor sit amet, consectetur adipiscing elit.
+                </p>
+              </div>
+            </div>
+          </div>
+        </article>
+      </section>
+      <section id="section4">
+        <article class="container">
+          <div class="row">
+            <div class="col-lg-3"></div>
+            <div class="col-lg-7 col-md-12 breadcrumb-style">
+              <p>Extra Module 2</p>
+              <h3 class="featured-slider-header">
+                Lorem ipsum dolor sit amet, conses tetur adipiscing elit, sed si
+                do eiusmod tempor incididunt ut labore
+              </h3>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-3"></div>
+            <div class="col-lg-9">
+              <div class="slider-button-container">
+                <div class="slider-featured-leftbutton-wrapper featured-prev">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="13.268"
+                    height="21.536"
+                    viewBox="0 0 13.268 21.536"
+                  >
+                    <path
+                      id="Path_108507"
+                      data-name="Path 108507"
+                      d="M18,7.5l9,9-9,9"
+                      transform="translate(-16.232 -5.732)"
+                      fill="none"
+                      stroke="#122f1a"
+                      stroke-linejoin="round"
+                      stroke-width="5"
+                    />
+                  </svg>
+                </div>
+                <div class="slider-featured-rightbutton-wrapper featured-next">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="13.268"
+                    height="21.536"
+                    viewBox="0 0 13.268 21.536"
+                  >
+                    <path
+                      id="Path_108507"
+                      data-name="Path 108507"
+                      d="M18,7.5l9,9-9,9"
+                      transform="translate(-16.232 -5.732)"
+                      fill="none"
+                      stroke="#122f1a"
+                      stroke-linejoin="round"
+                      stroke-width="5"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 z-0"></div>
+            <div class="col-lg-8 col-md-12">
+              <div class="featured-flex-container-slider">
+                <div class="featured-flex-container">
+                  <img
+                    src="./assets/carousel-image2.png"
+                    alt="carousel-image2"
+                  />
+                  <p class="featured-flex-desc">
+                    Vivamus tincidunt molestie tellus, eu convallis turpis.
+                    Mauris auctor, libero at imperdiet gravida.
+                    <br /><br />Magna justo porta dolor, vel porttitor elit orci
+                    id nisl. Etiam quis orci convallis, facilisis magna ut,
+                    lacinia ligula. Cras commodo odio in iaculis tincidunt. Nunc
+                    urna lacus, maximus id mollis ac, aliquam nec ligula. Nulla
+                    facilisi. Nunc et tortor in diam ultricies condimentum ut et
+                    ante.
+                  </p>
+                </div>
+                <div class="featured-flex-container">
+                  <img
+                    src="./assets/carousel-image2.png"
+                    alt="carousel-image2"
+                  />
+                  <p class="featured-flex-desc">
+                    Vivamus tincidunt molestie tellus, eu convallis turpis.
+                    Mauris auctor, libero at imperdiet gravida.
+                    <br /><br />Magna justo porta dolor, vel porttitor elit orci
+                    id nisl. Etiam quis orci convallis, facilisis magna ut,
+                    lacinia ligula. Cras commodo odio in iaculis tincidunt. Nunc
+                    urna lacus, maximus id mollis ac, aliquam nec ligula. Nulla
+                    facilisi. Nunc et tortor in diam ultricies condimentum ut et
+                    ante.
+                  </p>
+                </div>
+                <div class="featured-flex-container">
+                  <img
+                    src="./assets/carousel-image2.png"
+                    alt="carousel-image2"
+                  />
+                  <p class="featured-flex-desc">
+                    Vivamus tincidunt molestie tellus, eu convallis turpis.
+                    Mauris auctor, libero at imperdiet gravida.
+                    <br /><br />Magna justo porta dolor, vel porttitor elit orci
+                    id nisl. Etiam quis orci convallis, facilisis magna ut,
+                    lacinia ligula. Cras commodo odio in iaculis tincidunt. Nunc
+                    urna lacus, maximus id mollis ac, aliquam nec ligula. Nulla
+                    facilisi. Nunc et tortor in diam ultricies condimentum ut et
+                    ante.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+      </section>
+      <section id="section5">
+        <article class="container">
+          <div class="row">
+            <div class="col-lg-3"></div>
+            <div class="col-lg-7 col-md-12 breadcrumb-style">
+              <p>Calls to Action</p>
+              <h3 class="cta-header">
+                Lorem ipsum dolor sit amet, conses tetur adipiscing elit, sed si
+                do eiusmod tempor incididunt ut labore
+              </h3>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-3"></div>
+            <div class="col-lg-3 col-md-12">
+              <h5 class="cta-title">
+                regional energy management initiative (2022)
+              </h5>
+            </div>
+            <div class="col-lg-4 col-md-8">
+              <p class="cta-desc">
+                Investment in energy efficiency and demand-side management
+                projects to help manage carbon emissions, improve power supply
+                in rural communities and encourage sustainable use of resources
+                in identified ASEAN countries
+              </p>
+            </div>
+            <div class="col-lg-2 col-md-4 cta-partner">
+              <p class="roboto-bold m-0">Partnered with</p>
+              <p>Clime Capital Management</p>
+            </div>
+          </div>
+          <div class="row cta-hr">
+            <div class="col-lg-3"></div>
+            <div class="col-lg-3 col-md-12">
+              <h5 class="cta-title">
+                improving community livelihoods through biofuel production
+                (2022)
+              </h5>
+            </div>
+            <div class="col-lg-4 col-md-8">
+              <p class="cta-desc">
+                Creation of viable Jatropha value chain for local communities on
+                marginal land to improve employment opportunities and increase
+                income
+              </p>
+            </div>
+            <div class="col-lg-2 col-md-4 cta-partner">
+              <p class="roboto-bold m-0">Partnered with</p>
+              <p>Sinar Mas</p>
+            </div>
+          </div>
+          <div class="row cta-hr">
+            <div class="col-lg-3"></div>
+            <div class="col-lg-3 col-md-12">
+              <h5 class="cta-title">the m40 initiative (2021)</h5>
+            </div>
+            <div class="col-lg-4 col-md-8">
+              <p class="cta-desc">
+                Build a cost-effective solution to coastal protection that is
+                particularly well suited to Asia based on Mangrove 40 (M40)
+                Cities Network report, while providing an enormous carbon
+                sequestration opportunity
+              </p>
+            </div>
+            <div class="col-lg-2 col-md-4 cta-partner">
+              <p class="roboto-bold m-0">Partnered with</p>
+              <p>UBS Optimus Foundation</p>
+            </div>
+          </div>
+          <div class="row cta-hr">
+            <div class="col-lg-3"></div>
+            <div class="col-lg-3 col-md-12">
+              <h5 class="cta-title">
+                accelerating circular and resilient cities (2021)
+              </h5>
+            </div>
+            <div class="col-lg-4 col-md-8">
+              <p class="cta-desc">
+                Circular economy intervention targeting three key opportunity
+                areas: Circular Food System, Circularity in the Built
+                Environment, and Circular Plastics
+              </p>
+            </div>
+            <div class="col-lg-2 col-md-4 cta-partner">
+              <p class="roboto-bold m-0">Partnered with</p>
+              <p>Resilient Cities Network</p>
+            </div>
+          </div>
+          <div class="row cta-button-container">
+            <div class="col-lg-3"></div>
+            <div class="col-lg-9 col-md-12 position-relative">
+              <a
+                class="d-flex justify-content-center text-decoration-none"
+                href="#"
+                ><button class="button-cta">More Calls To Action</button></a
+              >
+            </div>
+          </div>
+        </article>
+      </section>
+    </main>
+    <footer>
+      <div class="footer">
+        <div class="container footer-container">
+          <div class="row align-items-start">
+            <nav class="col-lg-3 col-md-12 col-sm-12 footer-logo">
+              <a href="#" class="p-0">
+                <img
+                  src="./assets/PAA_Logo Liner_Horizontal_White.png"
+                  alt="White PAA logo"
+                />
+              </a>
+            </nav>
+            <nav class="col-lg-2 col-md-3 col-sm-6 col-6">
+              <ul class="footer-link">
+                <li>
+                  <a href="#">OUR IMPACT</a>
+                </li>
+                <li>
+                  <a href="#">INSPIRING ACTION</a>
+                </li>
+                <li>
+                  <a href="#">PARTNERS IN ACTION</a>
+                </li>
+                <li>
+                  <a href="#">Events</a>
+                </li>
+                <li class="footer-nav1-hide">
+                  <a href="#">ABOUT US</a>
+                </li>
+                <li class="footer-nav1-hide">
+                  <a href="#">Media Centre</a>
+                </li>
+                <li class="footer-nav1-hide">
+                  <a href="#">Contact Us</a>
+                </li>
+              </ul>
+            </nav>
+            <nav class="col-lg-3 col-md-4 footer-nav2-hide">
+              <ul class="footer-link">
+                <li>
+                  <a href="#">ABOUT US</a>
+                </li>
+                <li>
+                  <a href="#">Media Centre</a>
+                </li>
+                <li>
+                  <a href="#">Contact Us</a>
+                </li>
+              </ul>
+            </nav>
+            <nav class="col-lg-4 col-md-5 col-sm-6 col-6">
+              <ul class="footer-socials">
+                <li>
+                  <p class="opacity">
+                    28 Orchard Road <br />
+                    Temasek Shophouse <br />
+                    Singapore 238832
+                  </p>
+                </li>
+                <li>
+                  <p class="opacity" style="margin-bottom: 10px">Follow Us</p>
+                  <a href="#">Linkedin</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="row footer-footnote">
+            <div class="col-lg-8 col-md-7 footer-nav3-block">
+              <p class="opacity">&copy; 2023 All rights reserved.</p>
+            </div>
+            <nav class="col-lg-2 col-md-2 col-sm-6 col-6">
+              <ul>
+                <li>
+                  <a href="#">Privacy Policy</a>
+                </li>
+              </ul>
+            </nav>
+            <nav class="col-lg-2 col-md-3 col-sm-6 col-6">
+              <ul class="footer-tnc">
+                <li>
+                  <a href="#">Terms Of Use</a>
+                </li>
+              </ul>
+            </nav>
+            <nav class="col-lg-2 col-md-3 col-sm-6 col-6 footer-nav3-hide">
+              <ul class="footer-tnc">
+                <li style="margin-top: 24px">
+                  <p class="opacity">&copy; 2023 All rights reserved.</p>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

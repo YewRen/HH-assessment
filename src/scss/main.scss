@@ -1,0 +1,13 @@
+$grid-gutter-width: 1rem;
+$breadcrumb-divider-color: #f36b21;
+$offcanvas-horizontal-width: 100%;
+$offcanvas-border-width: 0;
+$container-max-widths: (
+  xs: 393px,
+  sm: 540px,
+  md: 768px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1366px
+);
+@import "../../node_modules/bootstrap/scss/bootstrap";

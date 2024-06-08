@@ -1,0 +1,148 @@
+.mobile-nav {
+  margin-left: 60px;
+  margin-top: 137.5px;
+}
+
+.mobile-nav ul {
+  row-gap: 32px;
+}
+
+.mobile-nav a {
+  font-size: var(--size-t-h5);
+  line-height: var(--line-t-h5);
+  font-family: "Noto Serif", serif;
+  font-weight: 400;
+  font-style: normal;
+  color: var(--clr-primary);
+  text-decoration: none;
+}
+
+.mobile-nav a:hover {
+  opacity: 0.5;
+}
+
+.mobile-nav a:active {
+  opacity: 0.7;
+}
+
+.canvas-header {
+  display: flex;
+  justify-content: end;
+  margin: 23.5px 240px 0 0;
+}
+
+.canvas-header.search {
+  margin: 23.5px 30px 0 0;
+}
+
+.offcanvas.offcanvas-end {
+  left: 210px;
+}
+
+.offcanvas-backdrop {
+  background-color: rgba(255, 255, 255, 0);
+  -webkit-backdrop-filter: blur(15px);
+  backdrop-filter: blur(15px);
+}
+
+.offcanvas-backdrop.show {
+  opacity: 1;
+}
+
+#searchmenu {
+  height: 329px;
+}
+
+.input-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+}
+
+.input-container input.tablet-input {
+  display: inline-block;
+}
+
+.input-container input.mobile-input {
+  display: none;
+}
+
+.input-container input {
+  border: none;
+  border-bottom: 1px solid var(--clr-primary);
+  width: 90vw;
+  font-size: var(--size-t-h5);
+  line-height: var(--line-t-h5);
+  color: var(--clr-primary);
+  font-family: "Noto Serif", serif;
+  font-weight: 400;
+  font-style: normal;
+  padding-bottom: 8px;
+}
+
+.input-container input::placeholder {
+  opacity: 0.4;
+}
+
+#arrow-icon {
+  display: none;
+  cursor: pointer;
+  position: absolute;
+  transform: translate(-100%);
+}
+
+.input-container textarea:focus,
+.input-container input:focus {
+  outline: none;
+}
+
+.input-container input:-webkit-autofill,
+.input-container input:-webkit-autofill:hover,
+.input-container input:-webkit-autofill:focus,
+.input-container input:-webkit-autofill:active {
+  -webkit-transition-delay: 9999s;
+  transition-delay: 9999s;
+}
+
+.navbar-toggler {
+  border: none;
+  padding: 0;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
+.btn-close {
+  opacity: 1;
+  color: var(--clr-primary);
+}
+
+.btn-close:focus {
+  box-shadow: none;
+}
+
+@media (max-width: 576px) {
+  .offcanvas.offcanvas-end {
+    left: 0;
+  }
+  .canvas-header.search,
+  .canvas-header {
+    margin: 23.5px 15px 0 0;
+  }
+  .mobile-nav {
+    margin-left: 14px;
+    margin-top: 39.5px;
+  }
+  #searchmenu {
+    height: 270px;
+  }
+  .input-container input.tablet-input {
+    display: none;
+  }
+
+  .input-container input.mobile-input {
+    display: inline-block;
+  }
+}
