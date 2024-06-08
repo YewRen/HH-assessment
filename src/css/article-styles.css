@@ -244,7 +244,7 @@
 .slider-item-long-wrapper,
 .featured-flex-container,
 .featured-flex-container img {
-  /* -webkit-user-drag: none; */
+  -webkit-user-drag: none;
   user-select: none;
   -webkit-user-select: none;
 }

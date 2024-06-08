@@ -57,13 +57,36 @@ slider.addEventListener("mousedown", (e) => {
   checkButtons()
 });
 
+slider.addEventListener("touchstart", (e) => {
+  isDown = true;
+  slider.classList.add("active");
+  startX = e.pageX - slider.offsetLeft;
+  scrollLeft = slider.scrollLeft;
+  checkButtons()
+});
+
 document.addEventListener("mouseup", () => {
   isDown = false;
   slider.classList.remove("active");
   updateScrollAmount()
 });
 
+document.addEventListener("touchend", () => {
+  isDown = false;
+  slider.classList.remove("active");
+  updateScrollAmount()
+});
+
 document.addEventListener("mousemove", (e) => {
+  if (!isDown) return;
+  e.preventDefault();
+  const x = e.pageX - slider.offsetLeft;
+  const walk = (x - startX) * 0.75; // Adjust sensitivity
+  slider.scrollLeft = scrollLeft - walk;
+  checkButtons()
+});
+
+document.addEventListener("touchmove", (e) => {
   if (!isDown) return;
   e.preventDefault();
   const x = e.pageX - slider.offsetLeft;
