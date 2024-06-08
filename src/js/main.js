@@ -163,10 +163,26 @@ featuredSlider.addEventListener("mousedown", (e) => {
   checkFeaturedButtons()
 });
 
+featuredSlider.addEventListener("touchstart", (e) => {
+  isFeaturedDown = true;
+  featuredSlider.classList.add("active");
+  startFeaturedX = e.pageX - featuredSlider.offsetLeft;
+  scrollFeaturedLeft = featuredSlider.scrollLeft;
+  checkFeaturedButtons()
+  e.stopPropagation();
+});
+
 document.addEventListener("mouseup", () => {
   isFeaturedDown = false;
   featuredSlider.classList.remove("active");
   updateFeaturedScrollAmount()
+});
+
+document.addEventListener("touchend", () => {
+  isFeaturedDown = false;
+  featuredSlider.classList.remove("active");
+  updateFeaturedScrollAmount()
+  e.stopPropagation();
 });
 
 document.addEventListener("mousemove", (e) => {
@@ -176,6 +192,16 @@ document.addEventListener("mousemove", (e) => {
   const walk = (x - startFeaturedX) * 0.75; // Adjust sensitivity
   featuredSlider.scrollLeft = scrollFeaturedLeft - walk;
   checkFeaturedButtons()
+});
+
+document.addEventListener("touchmove", (e) => {
+  if (!isFeaturedDown) return;
+  e.preventDefault();
+  const x = e.pageX - featuredSlider.offsetLeft;
+  const walk = (x - startFeaturedX) * 0.75; // Adjust sensitivity
+  featuredSlider.scrollLeft = scrollFeaturedLeft - walk;
+  checkFeaturedButtons()
+  e.stopPropagation();
 });
 
 function updateFeaturedScrollAmount() {
