@@ -63,6 +63,7 @@ slider.addEventListener("touchstart", (e) => {
   startX = e.pageX - slider.offsetLeft;
   scrollLeft = slider.scrollLeft;
   checkButtons()
+  e.stopPropagation();
 });
 
 document.addEventListener("mouseup", () => {
@@ -75,6 +76,7 @@ document.addEventListener("touchend", () => {
   isDown = false;
   slider.classList.remove("active");
   updateScrollAmount()
+  e.stopPropagation();
 });
 
 document.addEventListener("mousemove", (e) => {
@@ -93,6 +95,7 @@ document.addEventListener("touchmove", (e) => {
   const walk = (x - startX) * 0.75; // Adjust sensitivity
   slider.scrollLeft = scrollLeft - walk;
   checkButtons()
+  e.stopPropagation();
 });
 
 function updateScrollAmount() {
