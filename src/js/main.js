@@ -1,9 +1,9 @@
 import "../css/main.css";
-import "../css/header.css"
+import "../css/header.css";
 import "../css/article-styles.css";
-import "../css/mobile-nav.css"
-import "../css/utils.css"
-import "../css/footer.css"
+import "../css/mobile-nav.css";
+import "../css/utils.css";
+import "../css/footer.css";
 import "../css/styles.css";
 import * as bootstrap from "bootstrap";
 
@@ -54,7 +54,7 @@ slider.addEventListener("mousedown", (e) => {
   slider.classList.add("active");
   startX = e.pageX - slider.offsetLeft;
   scrollLeft = slider.scrollLeft;
-  checkButtons()
+  checkButtons();
 });
 
 slider.addEventListener("touchstart", (e) => {
@@ -62,20 +62,20 @@ slider.addEventListener("touchstart", (e) => {
   slider.classList.add("active");
   startX = e.pageX - slider.offsetLeft;
   scrollLeft = slider.scrollLeft;
-  checkButtons()
+  checkButtons();
   e.stopPropagation();
 });
 
 document.addEventListener("mouseup", () => {
   isDown = false;
   slider.classList.remove("active");
-  updateScrollAmount()
+  updateScrollAmount();
 });
 
 document.addEventListener("touchend", () => {
   isDown = false;
   slider.classList.remove("active");
-  updateScrollAmount()
+  updateScrollAmount();
   e.stopPropagation();
 });
 
@@ -85,7 +85,7 @@ document.addEventListener("mousemove", (e) => {
   const x = e.pageX - slider.offsetLeft;
   const walk = (x - startX) * 0.75; // Adjust sensitivity
   slider.scrollLeft = scrollLeft - walk;
-  checkButtons()
+  checkButtons();
 });
 
 document.addEventListener("touchmove", (e) => {
@@ -94,7 +94,7 @@ document.addEventListener("touchmove", (e) => {
   const x = e.pageX - slider.offsetLeft;
   const walk = (x - startX) * 1.5; // Adjust sensitivity
   slider.scrollLeft = scrollLeft - walk;
-  checkButtons()
+  checkButtons();
   e.stopPropagation();
 });
 
@@ -126,11 +126,17 @@ function checkButtons() {
 checkButtons();
 
 // Carousel slider for featured article list
-const featuredSlider = document.querySelector(".featured-flex-container-slider");
+const featuredSlider = document.querySelector(
+  ".featured-flex-container-slider"
+);
 const featuredPrevButton = document.querySelector(".featured-prev");
 const featuredNextButton = document.querySelector(".featured-next");
-const featuredPrevButtonWrapper = document.querySelector(".slider-featured-leftbutton-wrapper");
-const featuredNextButtonWrapper = document.querySelector(".slider-featured-rightbutton-wrapper");
+const featuredPrevButtonWrapper = document.querySelector(
+  ".slider-featured-leftbutton-wrapper"
+);
+const featuredNextButtonWrapper = document.querySelector(
+  ".slider-featured-rightbutton-wrapper"
+);
 
 let isFeaturedDown = false;
 let startFeaturedX;
@@ -160,7 +166,7 @@ featuredSlider.addEventListener("mousedown", (e) => {
   featuredSlider.classList.add("active");
   startFeaturedX = e.pageX - featuredSlider.offsetLeft;
   scrollFeaturedLeft = featuredSlider.scrollLeft;
-  checkFeaturedButtons()
+  checkFeaturedButtons();
 });
 
 featuredSlider.addEventListener("touchstart", (e) => {
@@ -168,20 +174,20 @@ featuredSlider.addEventListener("touchstart", (e) => {
   featuredSlider.classList.add("active");
   startFeaturedX = e.pageX - featuredSlider.offsetLeft;
   scrollFeaturedLeft = featuredSlider.scrollLeft;
-  checkFeaturedButtons()
+  checkFeaturedButtons();
   e.stopPropagation();
 });
 
 document.addEventListener("mouseup", () => {
   isFeaturedDown = false;
   featuredSlider.classList.remove("active");
-  updateFeaturedScrollAmount()
+  updateFeaturedScrollAmount();
 });
 
 document.addEventListener("touchend", () => {
   isFeaturedDown = false;
   featuredSlider.classList.remove("active");
-  updateFeaturedScrollAmount()
+  updateFeaturedScrollAmount();
   e.stopPropagation();
 });
 
@@ -191,16 +197,16 @@ document.addEventListener("mousemove", (e) => {
   const x = e.pageX - featuredSlider.offsetLeft;
   const walk = (x - startFeaturedX) * 0.75; // Adjust sensitivity
   featuredSlider.scrollLeft = scrollFeaturedLeft - walk;
-  checkFeaturedButtons()
+  checkFeaturedButtons();
 });
 
 document.addEventListener("touchmove", (e) => {
   if (!isFeaturedDown) return;
   e.preventDefault();
   const x = e.pageX - featuredSlider.offsetLeft;
-  const walk = (x - startFeaturedX) * 0.75; // Adjust sensitivity
+  const walk = (x - startFeaturedX) * 1.5; // Adjust sensitivity
   featuredSlider.scrollLeft = scrollFeaturedLeft - walk;
-  checkFeaturedButtons()
+  checkFeaturedButtons();
   e.stopPropagation();
 });
 
@@ -220,7 +226,10 @@ function checkFeaturedButtons() {
     featuredPrevButtonWrapper.style.pointerEvents = "auto";
   }
 
-  if (featuredSlider.scrollLeft + featuredSlider.clientWidth + 1 >= featuredSlider.scrollWidth) {
+  if (
+    featuredSlider.scrollLeft + featuredSlider.clientWidth + 1 >=
+    featuredSlider.scrollWidth
+  ) {
     featuredNextButton.classList.add("disable-button");
     featuredNextButtonWrapper.style.pointerEvents = "none";
   } else {
@@ -288,19 +297,19 @@ document.addEventListener("DOMContentLoaded", function () {
 document.addEventListener("DOMContentLoaded", function () {
   const scrollSpy = new bootstrap.ScrollSpy(document.body, {
     target: "#sidebar",
-    offset: 0
+    offset: 0,
   });
 });
 
-const searchInput = document.querySelectorAll("#search-input")
+const searchInput = document.querySelectorAll("#search-input");
 
 searchInput.forEach((input) => {
-  input.addEventListener('input', function() {
-    const arrowIcon = document.getElementById('arrow-icon');
+  input.addEventListener("input", function () {
+    const arrowIcon = document.getElementById("arrow-icon");
     if (this.value.trim().length > 0) {
-      arrowIcon.style.display = 'inline-block';
+      arrowIcon.style.display = "inline-block";
     } else {
-      arrowIcon.style.display = 'none';
+      arrowIcon.style.display = "none";
     }
   });
-})
+});
