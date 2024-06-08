@@ -311,6 +311,7 @@
   border: none;
   width: 70px;
   height: 26px;
+  white-space: nowrap;
 }
 
 .button-tag:hover {
